@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UrSpace | A Brand By You, For You">
+    <title>UrSpace | A Brand By You, For You</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Montserrat font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/" class="logo">UrSpace</a>
+                <a href="/network" class="alumni-tool">Alumni Engagement Tool</a>
+            </div>
+            <div class="nav-links">
+                <a href="#offerings">Solutions</a>
+                <a href="#about">About</a>
+                <a href="#contact">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">A brand by you, for you.</h1>
+        </div>
+    </section>
+
+    <!-- Offerings Section -->
+    <section id="offerings" class="features">
+        <div class="container">
+            <h2>Our Offerings</h2>
+            <div class="features-grid">
+                <button onclick="window.location.href='/style'" class="feature-card">
+                    <h3>UrStyle</h3>
+                    <p>Premium collegiate apparel that makes a statement. Look good, feel confident.</p>
+                </button>
+                <button onclick="window.location.href='/socials'" class="feature-card">
+                    <h3>UrSocials</h3>
+                    <p>Exclusive events and meetups that connect you with like-minded peers.</p>
+                </button>
+                <button onclick="window.location.href='/network'" class="feature-card">
+                    <h3>UrNetwork</h3>
+                    <p>Build meaningful connections with alumni across your clubs and orgs.</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Why Choose Us</h2>
+                    <div class="pillar">
+                        <span class="number">01</span>
+                        <h3>UrStyle</h3>
+                        <p>Elevate your campus presence with our premium collegiate apparel. Each piece is designed for comfort, style, and that perfect blend of casual and professional. From lecture halls to networking events, look your best.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="number">02</span>
+                        <h3>UrSocials</h3>
+                        <p>Join a vibrant community of like-minded students. Our curated events range from casual mixers to professional workshops, creating the perfect environment to make lasting connections.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="number">03</span>
+                        <h3>UrNetwork</h3>
+                        <p>Connect with alumni and peers who share your interests and ambitions. Build a powerful network that extends beyond graduation and opens doors to incredible opportunities.</p>
+                    </div>
+                </div>
+                <div class="case-studies">
+                    <div class="carousel">
+                        <!-- Success stories will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form class="contact-form" id="contactForm" action="contact.php" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="company" name="company" required placeholder=" ">
+                    <label for="company">Company</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span class="btn-text">Send Message</span>
+                    <span class="spinner"></span>
+                </button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Urspace, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js" defer></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const spinner = submitButton.querySelector('.spinner');
+            const btnText = submitButton.querySelector('.btn-text');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Show loading state
+            submitButton.disabled = true;
+            spinner.style.display = 'inline-block';
+            btnText.textContent = 'Sending...';
+            formMessage.textContent = '';
+            
+            // Submit form
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    formMessage.textContent = data.message;
+                    formMessage.style.color = 'var(--color-success)';
+                    form.reset();
+                } else {
+                    formMessage.textContent = data.message;
+                    formMessage.style.color = 'var(--color-error)';
+                }
+            })
+            .catch(error => {
+                formMessage.textContent = 'An error occurred. Please try again.';
+                formMessage.style.color = 'var(--color-error)';
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                spinner.style.display = 'none';
+                btnText.textContent = 'Send Message';
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,14 @@
+{
+    "name": "urspace/website",
+    "description": "UrSpace Website",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UrSpace Team"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
