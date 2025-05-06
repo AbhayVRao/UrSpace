@@ -7,6 +7,9 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+// Load configuration
+$config = require 'config.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -24,16 +27,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = $config['smtp']['host'];
         $mail->SMTPAuth = true;
-        $mail->Username = '23eaf165d5286b'; // Replace with your Mailtrap username
-        $mail->Password = 'a54d3fe1cd6f20'; // Replace with your Mailtrap password
+        $mail->Username = $config['smtp']['username'];
+        $mail->Password = $config['smtp']['password'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 2525;
+        $mail->Port = $config['smtp']['port'];
 
         // Recipients
         $mail->setFrom($email, $name);
-        $mail->addAddress('abhayr0412@gmail.com');
+        $mail->addAddress('support@urspace.us');
 
         // Content
         $mail->isHTML(true);
